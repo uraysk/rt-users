@@ -5,23 +5,23 @@ import { UsersList } from "../assets/components/pages/UsersList";
 
 export const HomeRoutes = [
     {
-        path:'',
-        exact:true,
-        children:<Home />
+        path: "",
+        exact: true,
+        children: <Home />,
     },
     {
-        path:'/users',
-        exact:false,
-        children:<UsersList />
+        path: "/users",
+        exact: false,
+        children: <UsersList />,
     },
     {
-        path:'/setting',
-        exact:false,
-        children:<Setting />
+        path: "/setting",
+        exact: false,
+        children: <Setting />,
     },
     {
-        path:'*',
-        exact:false,
-        children:<Page404 />
-    }
-]
+        path: "*",
+        exact: false,
+        children: <Page404 />,
+    },
+];
