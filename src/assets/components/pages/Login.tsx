@@ -1,7 +1,6 @@
-import { VFC } from "react";
 
-export const Login:VFC = () => {
-    return (
+export const Login = () =>{
+    return(
         <>
             <h3>Login</h3>
         </>
