@@ -20,3 +20,5 @@ export const MenuButton = memo(({ onOpen }: Props) => {
         />
     );
 });
+
+MenuButton.displayName="MenuButton"

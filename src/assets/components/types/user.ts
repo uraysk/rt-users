@@ -1,0 +1,13 @@
+export type User = {
+    id: number;
+    name: string;
+    username: string;
+    email: string;
+    address: {
+        city: string;
+        street: string;
+    };
+    company:{
+        name: string;
+    }
+}
