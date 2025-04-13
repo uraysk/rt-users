@@ -1,5 +1,3 @@
-export const UsersList = () =>{
-    return(
-            <h3>Users List</h3>
-    )
-}
+export const UsersList = () => {
+  return <h3>Users List</h3>;
+};

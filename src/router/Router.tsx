@@ -2,8 +2,10 @@ import { Route, Switch } from "react-router-dom"
 import { Login } from "../assets/components/pages/Login"
 import { HomeRoutes } from "./HomeRoutes"
 import { HeaderLayout } from "../assets/components/templates/HeaderLayout";
+import { VFC } from "react";
 
-export const Router = () =>{
+
+export const Router:VFC = () =>{
     return(
         <Switch>
             <Route exact path="/">
@@ -27,3 +29,4 @@ export const Router = () =>{
              />
         </Switch>
     )};
+
