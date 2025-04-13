@@ -16,3 +16,4 @@ export const Header = memo(() =>{
             {/* PS size hambuger*/}   
         </Flex>
 )})
+Header.displayName="Header";

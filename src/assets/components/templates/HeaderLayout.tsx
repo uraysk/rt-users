@@ -9,5 +9,4 @@ export const HeaderLayout = memo(({ children }: { children: ReactNode }) => {
         </>
     );
 });
-
 HeaderLayout.displayName="HeaderLayout";

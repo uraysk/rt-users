@@ -7,4 +7,5 @@ export const Setting:VFC = () => {
             <p>There is no content to set up.</p>
         </>
     );
+
 };
