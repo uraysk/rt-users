@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Router } from "./router/Router";
 
 export default function App() {
+<<<<<<< HEAD
     return (
         <ChakraProvider>
             <BrowserRouter>
@@ -10,4 +11,13 @@ export default function App() {
             </BrowserRouter>
         </ChakraProvider>
     );
+=======
+  return (
+    <ChakraProvider>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </ChakraProvider>
+  );
+>>>>>>> origin/feature/login-style
 }

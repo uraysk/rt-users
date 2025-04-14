@@ -18,3 +18,5 @@ export const TitleCard: FC<Props> = memo(({ children, title }) => {
         </BaseCard>
     );
 });
+TitleCard.displayName="TitleCard";
+

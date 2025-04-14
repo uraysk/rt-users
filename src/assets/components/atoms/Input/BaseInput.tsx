@@ -25,3 +25,4 @@ export const BaseInput = memo(({ placeholder, type, value, onChange }: Props) =>
 });
 
 BaseInput.displayName = "BaseInput";
+

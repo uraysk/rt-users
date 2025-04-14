@@ -18,7 +18,6 @@ export const MenuButton = memo(({ onOpen }: Props) => {
             aria-label="Open Menu"
             marginLeft="15%"
         />
-    );
-});
+)});
 
 MenuButton.displayName="MenuButton"

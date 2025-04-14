@@ -17,5 +17,6 @@ export const BaseCard: FC<Props> = memo(({ children }) => {
         >
             {children}
         </Flex>
-    );
-});
+    )});
+
+BaseCard.displayName="BaseCard";
