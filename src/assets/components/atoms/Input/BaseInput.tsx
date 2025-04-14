@@ -20,3 +20,4 @@ export const BaseInput:FC<Props> = memo(({placeholder, type})=>{
             />
     )
 })
+BaseInput.displayName="BaseInput";

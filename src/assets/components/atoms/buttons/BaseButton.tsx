@@ -12,3 +12,4 @@ export const BaseButton:FC<Props> = memo(({children, onClick, type="button", bgC
         <Button onClick={onClick} type={type} bg={bgColor || "blue.500"} color="white" _hover={{ bg: bgColor ? "gray.600" : "blue.600" }}  >{children}</Button>
     )
 })
+BaseButton.displayName="BaseButton";

@@ -15,3 +15,5 @@ export const LoginCard = memo(()=>{
             </Flex>   
     )
 }) 
+
+LoginCard.displayName="LoginCard";

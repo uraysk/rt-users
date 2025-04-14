@@ -15,3 +15,4 @@ export const HeaderLayout:FC<Props> = memo((props) =>{
     </>
     )
 })
+HeaderLayout.displayName="HeaderLayout";

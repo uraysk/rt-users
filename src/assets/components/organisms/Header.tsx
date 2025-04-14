@@ -25,3 +25,5 @@ export const Header:FC = memo(() =>{
             <MenuDrawer isOpen={isOpen} onClose={onClose}/>
         </Flex>
 )})
+
+Header.displayName="Header";

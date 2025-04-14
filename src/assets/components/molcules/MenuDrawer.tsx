@@ -27,3 +27,5 @@ export const MenuDrawer = memo(({isOpen, onClose}:Props) =>{
         </Drawer>
     )
 })
+
+MenuDrawer.displayName="MenuDrawer";

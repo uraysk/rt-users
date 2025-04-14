@@ -14,3 +14,5 @@ export const InputText:FC<Props> = memo (({title, placeholder}) => {
         </Box>
     )
 })
+
+InputText.displayName="InputText";
