@@ -7,7 +7,7 @@ export type User = {
         city: string;
         street: string;
     };
-    company:{
+    company: {
         name: string;
-    }
-}
+    };
+};

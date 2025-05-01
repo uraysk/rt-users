@@ -52,5 +52,4 @@ export const Header: FC = memo(() => {
     );
 });
 
-Header.displayName = 'Header';
-
+Header.displayName = "Header";

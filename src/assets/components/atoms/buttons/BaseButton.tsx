@@ -8,7 +8,14 @@ type Props = {
     bgColor?: string;
     isLoading?: boolean;
 };
-export const BaseButton = memo(({ children, onClick, type = "button", isLoading=false, bgColor }: Props)  => {
+export const BaseButton = memo(
+    ({
+        children,
+        onClick,
+        type = "button",
+        isLoading = false,
+        bgColor,
+    }: Props) => {
         return (
             <Button
                 onClick={onClick}
@@ -24,4 +31,4 @@ export const BaseButton = memo(({ children, onClick, type = "button", isLoading=
     },
 );
 
-BaseButton.displayName = 'BaseButton';
+BaseButton.displayName = "BaseButton";

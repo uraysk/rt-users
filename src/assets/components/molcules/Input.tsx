@@ -1,5 +1,5 @@
 import { Box, Text } from "@chakra-ui/react";
-import {  memo } from "react";
+import { memo } from "react";
 import { BaseInput } from "../atoms/Input/BaseInput";
 
 type Props = {
@@ -17,4 +17,4 @@ export const InputText = memo(({ title, placeholder }: Props) => {
     );
 });
 
-InputText.displayName = 'InputText';
+InputText.displayName = "InputText";
