@@ -15,7 +15,6 @@
     "@chakra-ui/system": "1.7.6",
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
-    "@types/react-router-dom": "5.2.0",
     "axios": "0.21.1",
     "framer-motion": "4.1.17",
     "react": "17.0.1",

@@ -1,11 +1,9 @@
-import { LoginCard } from "../organisms/LoginCard"
+import { LoginCard } from "../organisms/LoginCard";
 
-export const Login = () =>{
-    return(
-        <>
-            <LoginCard />
-        </>
-
-    )
-}
-
+export const Login = () => {
+  return (
+    <>
+      <LoginCard />
+    </>
+  );
+};
