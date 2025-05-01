@@ -2,17 +2,17 @@ import { FC, memo, ReactNode } from "react";
 import { Header } from "../atoms/layout/Header";
 
 type Props = {
-    children: ReactNode;
-}
+  children: ReactNode;
+};
 
-export const HeaderLayout:FC<Props> = memo((props) =>{
-    const {children} = props;
-    return(
+export const HeaderLayout: FC<Props> = memo((props) => {
+  const { children } = props;
+  return (
     <>
-        <Header />
-        { children }
+      <Header />
+      {children}
     </>
-    )
-})
+  );
+});
 
-HeaderLayout.displayName="HeaderLayout";
+HeaderLayout.displayName = "HeaderLayout";
