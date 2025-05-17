@@ -8,7 +8,7 @@ type Props = {
 };
 export const TitleCard: FC<Props> = memo(({ children, title }) => {
     return (
-        <BaseCard>
+        <BaseCard w="full" maxW="400px">
             <Box mb={2} borderBottom="1px solid #ddd" pb={2} align="center">
                 <Text fontSize="2xl" fontWeight="bold">
                     {title}

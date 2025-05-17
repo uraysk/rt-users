@@ -1,49 +1,39 @@
-import { useEffect, useState } from "react";
-import { User } from "../types/user";
+import { useCallback, useState } from "react";
 import axios from "axios";
 
-type userDetails = {
-    user: User | null;
+import { useDisplayMessage } from "./useDisplayMessage";
+import { User } from "../types/user";
+
+type userReturn = {
+    user: User[] | null;
     loading: boolean;
-    error: string | null;
+    getUser: () => void;
 };
-export const useUserDetail = (userId: string): userDetails => {
-    const [user, setUser] = useState<User | null>(null);
+
+export const useUserDetail = (): userReturn => {
+    const { showMessage } = useDisplayMessage();
+    const [user, setUser] = useState<Array<User>>([]);
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
 
-    useEffect(() => {
-        if (!userId) return;
-        const fetchUser = async () => {
-            setLoading(true);
-            setError(null);
-
-            try {
-                const res = await axios.get<User[]>(
-                    "https://jsonplaceholder.typicode.com/users",
-                );
-                const foundUser = res.data.find(
-                    (user) => String(user.id) === userId,
-                );
-                if (foundUser) {
-                    setUser(foundUser);
-                } else {
-                    setUser(null);
-                    setError("ユーザーが見つかりません");
-                }
-            } catch (error) {
-                setError("取得に失敗しました");
-                setUser(null);
-            } finally {
+    const getUser = useCallback(() => {
+        //Initializations
+        setLoading(true);
+        axios
+            .get<User[]>("https://jsonplaceholder.typicode.com/users")
+            .then((res) => setUser(res.data))
+            .catch(() => {
+                showMessage({
+                    title: "ERROR",
+                    description: "ユーザ情報が取得できませんでした",
+                    status: "error",
+                    duration: 5000,
+                    isClosable: true,
+                });
+            })
+            .finally(() => {
                 setLoading(false);
-            }
-        };
-        fetchUser();
-    }, [userId]);
+            });
+    }, [showMessage]);
 
-    return {
-        user,
-        loading,
-        error,
-    };
+    return { user, loading, getUser };
 };
