@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
 import { User } from "../types/user";
 import { useDisplayMessage } from "../hooks/useDisplayMessage";
+import { LoginUserContext } from "../atoms/context/LoginUserContext";
 
 type loginInfo = {
     userId: string;
@@ -19,14 +20,14 @@ export const useLogin = (): loginInfo => {
     const [loading, setLoading] = useState(false);
     const history = useHistory();
     const { showMessage } = useDisplayMessage();
+    const { setLoginUser } = useContext(LoginUserContext);
 
     useEffect(() => {
         return () => {
-            // コンポーネントがアンマウントされるときに状態更新を防ぐためのクリーンアップ
             setLoading(false);
             setIsSuccess(null);
         };
-    }, []); // 空の依存配列で一度だけクリーンアップが実行される
+    }, []);
 
     const handleLogin = async () => {
         setLoading(true);
@@ -37,6 +38,7 @@ export const useLogin = (): loginInfo => {
             const match = res.data.find((user) => String(user.id) === userId);
             setIsSuccess(!!match);
             if (match && String(match.id) === userId) {
+                setLoginUser(match);
                 history.push("/Home");
                 showMessage({
                     title: "Success!!",
@@ -54,7 +56,7 @@ export const useLogin = (): loginInfo => {
             console.error("ログインエラー: ", error);
             setIsSuccess(false);
         } finally {
-            setLoading(false); // 非同期処理が完了した後の状態更新
+            setLoading(false);
         }
     };
     return {
