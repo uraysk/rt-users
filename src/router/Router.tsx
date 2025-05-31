@@ -4,7 +4,7 @@ import { HomeRoutes } from "./HomeRoutes";
 import { HeaderLayout } from "../assets/components/templates/HeaderLayout";
 import { VFC } from "react";
 
-export const Router:VFC = () => {
+export const Router: VFC = () => {
   return (
     <Switch>
       <Route exact path="/">
