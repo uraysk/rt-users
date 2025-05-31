@@ -21,6 +21,7 @@ export const Router:VFC = () => {
                 path={`${url}${route.path}`}
               >
                 <HeaderLayout>{route.children}</HeaderLayout>
+                <HeaderLayout>{route.children}</HeaderLayout>
               </Route>
             ))}
           </Switch>
