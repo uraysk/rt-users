@@ -3,7 +3,7 @@ import { LoginCard } from "../organisms/LoginCard";
 import { useLogin } from "../hooks/useLogin";
 
 export const Login: VFC = memo(() => {
-    const { userId, setUserId, handleLogin, isSuccess, loading } = useLogin();
+    const { userId, setUserId, handleLogin, loading } = useLogin();
     return (
         <>
             <LoginCard
