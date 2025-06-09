@@ -2,9 +2,9 @@ import { Route, Switch } from "react-router-dom";
 import { Login } from "../assets/components/pages/Login";
 import { HomeRoutes } from "./HomeRoutes";
 import { HeaderLayout } from "../assets/components/templates/HeaderLayout";
-import { memo } from "react";
+import { VFC } from "react";
 
-export const Router = memo(() => {
+export const Router: VFC = () => {
   return (
     <Switch>
       <Route exact path="/">
@@ -28,6 +28,4 @@ export const Router = memo(() => {
       />
     </Switch>
   );
-});
-
-Router.displayName = "Router";
+};
