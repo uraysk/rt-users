@@ -36,3 +36,5 @@ export const LoginCard: FC<Props> = memo(
 );
 
 LoginCard.displayName = "LoginCard";
+
+LoginCard.displayName = "LoginCard";

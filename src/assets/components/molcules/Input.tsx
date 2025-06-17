@@ -18,3 +18,5 @@ export const InputText = memo(({ title, placeholder }: Props) => {
 });
 
 InputText.displayName = "InputText";
+
+InputText.displayName = "InputText";
