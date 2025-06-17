@@ -1,9 +1,19 @@
+import { memo, VFC } from "react";
 import { LoginCard } from "../organisms/LoginCard";
+import { useLogin } from "../hooks/useLogin";
 
-export const Login = () => {
-  return (
-    <>
-      <LoginCard />
-    </>
-  );
-};
+export const Login: VFC = memo(() => {
+    const { userId, setUserId, handleLogin, loading } = useLogin();
+    return (
+        <>
+            <LoginCard
+                userId={userId}
+                onChangeUserId={(value) => setUserId(value)}
+                onLogin={handleLogin}
+                loading={loading}
+            />
+        </>
+    );
+});
+
+Login.displayName = "Login";
