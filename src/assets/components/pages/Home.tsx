@@ -1,4 +1,6 @@
-export const Home = () => {
+import { VFC } from "react";
+
+export const Home: VFC = () => {
     return (
         <>
             <h3>Home</h3>

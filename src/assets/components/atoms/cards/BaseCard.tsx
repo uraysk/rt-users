@@ -1,10 +1,10 @@
 import { FC, memo, ReactNode } from "react";
-import { Flex } from "@chakra-ui/react";
+import { Flex, FlexProps } from "@chakra-ui/react";
 
 type Props = {
     children: ReactNode;
-};
-export const BaseCard: FC<Props> = memo(({ children }) => {
+} & FlexProps;
+export const BaseCard: FC<Props> = memo(({ children, ...props }) => {
     return (
         <Flex
             direction="column"
@@ -13,7 +13,7 @@ export const BaseCard: FC<Props> = memo(({ children }) => {
             color="black"
             borderRadius="3px"
             p={4}
-            width="400px"
+            {...props}
         >
             {children}
         </Flex>
