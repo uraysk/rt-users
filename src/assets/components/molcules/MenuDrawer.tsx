@@ -22,7 +22,7 @@ export const MenuDrawer = memo(({ isOpen, onClose }: Props) => {
     <Drawer isOpen={isOpen} onClose={onClose} placement="right">
       <DrawerOverlay />
       <DrawerContent>
-        <DrawerHeader></DrawerHeader>
+        <DrawerHeader　/>
         <DrawerBody>
           <Box mb={4}>
             <ChaLink as={RRLink} to="/home/users" onClick={onClose}>
