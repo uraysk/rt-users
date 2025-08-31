@@ -1,4 +1,6 @@
-export const Setting = () => {
+import { VFC } from "react";
+
+export const Setting: VFC = () => {
   return (
     <>
       <h3>Setting</h3>
